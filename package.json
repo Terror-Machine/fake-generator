@@ -1,0 +1,24 @@
+{
+  "name": "generator-fake",
+  "version": "1.0.6",
+  "description": "Generator untuk membuat gambar fake story dan fake tweet dengan dukungan emoji.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "image-generator",
+    "tweet",
+    "story",
+    "instagram",
+    "twitter"
+  ],
+  "author": "Terror-Machine",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^3.1.2",
+    "emoji-cache": "^1.0.0",
+    "emoji-db": "github:Terror-Machine/emoji-db#master"
+  }
+}
