@@ -3,6 +3,7 @@
 Sebuah package Node.js untuk membuat gambar secara dinamis menggunakan Node Canvas.
 
 ## Fitur
+- Generate Quotes dengan custom fontSize, maxWidth. (tidak support emoji. (sengaja))
 - Generate meme dengan custom fontSize, customPadding, custom square/normal size.
 - Generate fake chat iphone. simple saja. 
 - Generate fake story dengan foto profil, username, dan caption.
@@ -118,3 +119,23 @@ const fs = require('fs');
   });
   fs.writeFileSync('genMeme-square.png', gen2);
 })();
+```
+
+### Generate Quote
+```javascript
+const fs = require("fs");
+const { generateQuote } = require('generator-fake');
+
+(async () => {
+  const path = './susu.jpg';
+  const buffer = await generateQuote(
+    path, // gambar background
+    "Sekali melangkah dilarang putar arah apalagi menyerah.", // teks quote
+    {
+      fontSize: 30,
+      maxWidth: 300,  // opsional, lebar maksimal teks sebelum dipindah baris
+    }
+  );
+  fs.writeFileSync("quotes.png", buffer);
+})();
+```

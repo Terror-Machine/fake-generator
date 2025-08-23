@@ -1,6 +1,6 @@
 {
   "name": "generator-fake",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Generator untuk membuat gambar fake story dan fake tweet dengan dukungan emoji.",
   "main": "index.js",
   "scripts": {
