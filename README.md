@@ -1,8 +1,9 @@
 # generator-fake
 
-Sebuah package Node.js untuk membuat gambar fake Instagram story dan fake Tweet secara dinamis menggunakan Node Canvas.
+Sebuah package Node.js untuk membuat gambar secara dinamis menggunakan Node Canvas.
 
 ## Fitur
+- Generate meme dengan custom fontSize, customPadding, custom square/normal size.
 - Generate fake chat iphone. simple saja. 
 - Generate fake story dengan foto profil, username, dan caption.
 - Generate fake tweet dengan avatar, nama, username, status verified, dan teks.
@@ -93,3 +94,27 @@ async function createFakeChat() {
 
 createTweet();
 ```
+
+### Generate Meme
+```javascript
+const { generateMeme } = require('generator-fake');
+const fs = require('fs');
+
+(async () => {
+  // original + custom fontSize + padding
+  const path = './susu.jpg';
+  const gen1 = await generateMeme(path, '🤬 Top 🤬 Meme 🤬', '🤬 Bot 🤬 Meme 🤬', { 
+    fontSize: 65,
+    topPadding: 80,
+    bottomPadding: 80,
+  });
+  fs.writeFileSync('genMeme-normal.png', gen1);
+
+  // square + custom fontSize
+  const path = './susu.jpg';
+  const gen2 = await generateMeme(path, '🤬 Ngapain 🤬 Kamu 🤬', '🤬', { 
+    fontSize: 65,
+    square: true,
+  });
+  fs.writeFileSync('genMeme-square.png', gen2);
+})();
