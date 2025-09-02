@@ -45,7 +45,7 @@ createStory();
 
 ### Generate Fake Tweet
 ```javascript
-const { generateFakeStory } = require('generator-fake');
+const { generateFakeTweet } = require('generator-fake');
 const fs = require('fs');
 
 async function createTweet() {
@@ -70,7 +70,7 @@ async function createTweet() {
 createTweet();
 ```
 
-### Generate Fake Chat Iphone
+### Generate Fake Chat Iphone / IQC
 ```javascript
 const { generateFakeChatIphone } = require('generator-fake');
 const fs = require('fs');
